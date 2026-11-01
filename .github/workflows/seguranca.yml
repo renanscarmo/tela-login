@@ -1,0 +1,25 @@
+name: Seguranca
+
+on:
+  push:
+    branches: [main, feature]
+  pull_request:
+
+jobs:
+  seguranca:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar ferramentas
+        run: pip install bandit pip-audit
+
+      - name: SAST com Bandit
+        run: bandit -r . -x ./.venv
+
+      - name: SCA com pip-audit
+        run: pip-audit -r requirements.txt
