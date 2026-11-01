@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="static/style.css">
+    <title>Cadastro</title>
 </head>
 <body>
-    <h1>Entrar</h1>
-    <form>
+    <h1>Cadastro</h1>
+    <form method="POST" action="/cadastro">
         <label for="usuario">Usuário</label>
         <input type="text" id="usuario" name="usuario">
 
         <label for="senha">Senha</label>
         <input type="password" id="senha" name="senha">
 
-        <button type="submit">Entrar</button>
+        <button type="submit">Cadastrar</button>
         <p id="mensagem"></p>
     </form>
 
     
 
-    <script src="script.js"></script>
+    
 </body>
 </html>

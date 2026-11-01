@@ -1,0 +1,7 @@
+app:
+  secret_key: "COLOQUE-SUA-CHAVE-AQUI"
+  debug: true
+
+database:
+  arquivo: "usuario.db"
+  
